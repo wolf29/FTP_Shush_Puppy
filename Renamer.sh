@@ -20,13 +20,14 @@
 #       MA 02110-1301, USA.
 
 
-# for testing whether the titles and file structure line up
+# for changing the names of directories in the renaming stage.
 echo "Enter the name and relative location of the title file"
 read title_file
 echo "cd to the directory you are processing"
-echo "Enter the directory location from which we will extract subdirectories and files."
-echo "enter the absolute or relative path to this directory.
-echo " './' is valid for checking the present working directory."
+echo "Enter the directory location and file name in which"
+echo "  you will be changing directory names."
+echo "enter the absolute or relative path to this directory."
+echo "  ./  is valid for checking the present working directory."
 read directory
 
 # Read source directories in array
@@ -36,10 +37,9 @@ mapfile -t newnames < $title_file
 
 echo "oldnames: ${#oldnames[@]} : ${oldnames[@]}"
 echo "newnames: ${#newnames[@]} : ${newnames[@]}"
-
-# Compare array sizes
-[[ ${#oldnames[@]} -ne ${#newnames[@]} ]] && echo "Whoa there, pardner - there is a problem with your data" && exit
-[[ ${#oldnames[@]} -eq ${#newnames[@]} ]] && echo "The arrays have identical lengths - You can continue to the next stage" && exit
-
-
-
+directory2="../newNames/"
+for i in ${oldnames[@]
+    do
+        cp "${oldnames[${i}-1]" "$directory2${newnames[${i}-1]"
+        echo "${oldnames[${i}-1] is now  ${newnames[${i}-1]"
+    done
