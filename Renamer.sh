@@ -1,5 +1,6 @@
 #!/bin/sh -x
-#       Filename_Checker.sh Version 0.2.1
+#
+#       Renamer.sh         Version 0.0.1
 #
 #       Copyright 2011 Wolf Halton <wolf@sourcefreedom.com>, LYRASIS
 #
