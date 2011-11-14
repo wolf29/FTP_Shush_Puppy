@@ -1,39 +1,26 @@
 #!/bin/sh -x
 
+
 # for testing whether the titles and file structure line up
 echo "Enter the name and relative location of the title file"
-read tfile
+read title_file
+echo "cd to the directory you are processing"
 echo "Enter the directory location from which we will extract subdirectories and files."
-read drectory
+echo "enter the absolute or relative path to this directory.
+echo " './' is valid for checking the present working directory."
+read directory
 
-a=0
-while read line
-    do a=$(($a+1));
-    # echo $a;
-    done < "$tfile"
-#echo "Final line count is: $a"
-#echo $?
+# Read source directories in array
+mapfile -t oldnames < <(find $directory -maxdepth 1 -mindepth 1 -type d | sort)
+# Read target names in array
+mapfile -t newnames < $title_file
 
-find "$drectory" -type d  > "c.dat"
-cat ./c.dat
-b=-1
-while read line
-    do b=$(($b+1));
-    # echo $b;
-    done < "c.dat"
-echo "Folders and files in directory: $b"
-echo "Final line count: $a"
-#echo $?
+echo "oldnames: ${#oldnames[@]} : ${oldnames[@]}"
+echo "newnames: ${#newnames[@]} : ${newnames[@]}"
 
-j=$(echo "$a - $b" | bc)
-#echo $j
-if [ $j -ne 0 ]
-    then
-    echo "Whoa there, pardner - there is a problem with your data"
-    exit 113
-    #echo $?
-    break
-else
-    echo "The structure is balanced .. We will continue."
-    #echo $?
-fi
+# Compare array sizes
+[[ ${#oldnames[@]} -ne ${#newnames[@]} ]] && echo "Whoa there, pardner - there is a problem with your data" && exit
+[[ ${#oldnames[@]} -eq ${#newnames[@]} ]] && echo "The arrays have identical lengths - You can continue to the next stage" && exit
+
+
+
