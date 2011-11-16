@@ -1,6 +1,7 @@
-#!/bin/sh -x
+#!/bin/bash 
+# -x
 #
-#       Renamer.sh         Version 0.0.1
+#       Renamer.sh         Version 1.0.0
 #
 #       Copyright 2011 Wolf Halton <wolf@sourcefreedom.com>, LYRASIS
 #
@@ -21,25 +22,34 @@
 
 
 # for changing the names of directories in the renaming stage.
+echo "Before you begin, cd to the directory you are processing"
+echo "Enter Ctrl C to abort this action."
 echo "Enter the name and relative location of the title file"
 read title_file
-echo "cd to the directory you are processing"
-echo "Enter the directory location and file name in which"
-echo "  you will be changing directory names."
-echo "enter the absolute or relative path to this directory."
-echo "  ./  is valid for checking the present working directory."
-read directory
+
+directory="${PWD}/"
+echo "$directory"
 
 # Read source directories in array
-mapfile -t oldnames < <(find $directory -maxdepth 1 -mindepth 1 -type d | sort)
+mapfile -t oldnames < <(find "$directory" -maxdepth 1 -mindepth 1 -type d | sort)
 # Read target names in array
-mapfile -t newnames < $title_file
+mapfile -t newnames < "$title_file"
 
 echo "oldnames: ${#oldnames[@]} : ${oldnames[@]}"
 echo "newnames: ${#newnames[@]} : ${newnames[@]}"
 directory2="../newNames/"
-for i in ${oldnames[@]
+if [ ! -d "${directory2}" ]; then
+    mkdir "${directory2}"
+fi
+h=0
+# is the incrementer for the 'mv' command.  It didn't work to do 'h=$((i-1))' because 'i' was a filename - the content of index[x] - this is the problem to which one of the weird errors was pointing
+for i in "${oldnames[@]}"
     do
-        cp "${oldnames[${i}-1]" "$directory2${newnames[${i}-1]"
-        echo "${oldnames[${i}-1] is now  ${newnames[${i}-1]"
+        
+        #echo "$h is i minus one"
+        mv ${oldnames[$h]}  ${directory2}${newnames[$h]}
+        echo "${oldnames[$h]} is now ${newnames[$h]}"
+        #echo "${i}"
+        h=$((h+1))
     done
+exit 0
