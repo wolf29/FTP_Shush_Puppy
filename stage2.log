@@ -1,0 +1,6 @@
+oldnames: 5 : ./example1 ./example2 ./Example3 ./.git ./newNames
+newnames: 10 : clean_pup.py clean_pup.pyc find_pup.py find_pup.pyc flist.txt ftp_up.py Pig.pdf pipes.py poke.pdf ww
+There is a problem with the data. The arrays are not of identical size
+oldnames: 5 : ./example1 ./example2 ./Example3 ./.git ./newNames
+newnames: 5 : apple beta gamma delta epsilon
+The arrays have identical lengths
