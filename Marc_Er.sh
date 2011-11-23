@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/bash -x
 # -x
-#i
+#
 #       Marc_Er.sh         Version 0.0.1
 #
 #       Copyright 2011 Wolf Halton <wolf@sourcefreedom.com>, LYRASIS
@@ -29,9 +29,27 @@ IFS='
 '
 #-----------------
 
+echo "copy the proper marc.xml file into the parent directory of the directories being processed "
+echo "CD into that parent directory.  Run this script." 
+echo "If you are not set up properly, stop this script with <CTRL> <C>"
+ls *.xml
+echo "If this is the file you expected to see enter a 'y' to continue,"
+echo "If this is not the file you are using or if more than one file appears, enter a 'n' for a prompt to enter the filename."
+echo "otherwise enter the proper file name at the next prompt"
+read m1
 
-ParentDir=$(echo "${PWD}" | awk -F'/' '{print $NF}')
-
+if $m1="y"; then
+    marc=$((ls *.xml))
+else
+    read marc
+fi
+for i in $((ls -d)); do
+    cd $i
+    echo $i
+    ParentDir=$(echo "${PWD}" | awk -F'/' '{print $NF}')
+    cp "../$marc" "$ParentDir"_marc.xml""
+    cd ..
+    done 
 #echo "${PWD}" | awk -F'/' '{print $NF}'
 #echo "$ParentDir is the parent Directory name"
 

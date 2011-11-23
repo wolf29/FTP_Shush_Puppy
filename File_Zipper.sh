@@ -35,13 +35,29 @@ for i in .; do
         echo "${targetd2}/${i} has been created"
         cd .
         echo ${PWD}
-        zip ${targetd2}/${i}/${i}$zext *.jp2
+        zip "${targetd2}${i}/${i}$zext" *.jp2 2>&1 > /dev/null
         cd ..
         echo ${PWD}
         #cp $pmarc $title/$title+$mext
         #echo $title$mext " is in place." >> ziplog.log
         echo $title " and " $folder " zip done." >> ziplog.log
 done
+echo "If this is the file you expected to see enter a 'y' to continue,"
+echo "If this is not the file you are using or if more than one file appears, enter a 'n' for a prompt to enter the filename."
+echo "otherwise enter the proper file name at the next prompt"
+read m1
+
+# Maybe this will help
+# for i in $((ls -d)); do
+#    cd $i
+#    echo $i
+#    ParentDir=$(echo "${PWD}" | awk -F'/' '{print $NF}')
+#    zip "$ParentDir"_images.zip"" *.jp2
+#    cd ..
+#    done
+#echo "${PWD}" | awk -F'/' '{print $NF}'
+#echo "$ParentDir is the parent Directory name"
+
 
 targetd3="../ftp_staging/"
 # Copying the file structure to the ftp_staging directory
@@ -53,7 +69,7 @@ echo $targetd2 "*.zip files moved." >> ziplog.log
 find . -name \*.xml -exec cp {} $targetd2{} \;
 echo $targetd2 " ..complete." >> ziplog.log
 
-for item in (ls $targetd2)
+for item in (ls $targetd2) ; do
         scp -r item 74.217.44.233:/home/Lyrasis-FTP/ > ziplog.log 2>&1
 echo $title " has been copied to FTP server."
 done
