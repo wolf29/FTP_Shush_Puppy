@@ -22,6 +22,12 @@
 
 
 # for changing the names of directories in the renaming stage.
+
+# The following 2 lines makes the script treat the spaces in the 
+#  variables as 'just another character' 
+IFS='
+'
+#-----------------
 echo "Before you begin, cd to the directory you are processing"
 echo "Enter Ctrl C to abort this action."
 echo "Enter the name and relative location of the title file"
@@ -42,12 +48,14 @@ if [ ! -d "${directory2}" ]; then
     mkdir "${directory2}"
 fi
 h=0
-# is the incrementer for the 'mv' command.  It didn't work to do 'h=$((i-1))' because 'i' was a filename - the content of index[x] - this is the problem to which one of the weird errors was pointing
+# 'h' is the incrementer for the 'mv' command.  It didn't work to do 
+# 'h=$((i-1))' because 'i' was a filename - the content of index[x] 
+# - this is the problem to which one of the weird errors was pointing.
 for i in "${oldnames[@]}"
     do
         
         #echo "$h is i minus one"
-        mv ${oldnames[$h]}  ${directory2}${newnames[$h]}
+        mv ${oldnames[$h]}  ${directory}${newnames[$h]}
         echo "${oldnames[$h]} is now ${newnames[$h]}"
         #echo "${i}"
         h=$((h+1))
