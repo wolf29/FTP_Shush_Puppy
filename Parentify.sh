@@ -1,11 +1,11 @@
-#!/bin/bash 
+#!/bin/bash
 # -*- coding: utf-8 -*-
 #
-#       Underscore_Eviscerator_2.sh
+#       Parentify.sh
 #       
-#       Description: This script recursively removes underscores 
-#       from all objects in the directory so that 
-#       the names can be manipulated safely.
+#       Description: This script recursively concatenates as a prefix the 
+#       Parent directory name with the file name.  This is the production 
+#       version of mvmv2.sh which tests this function.
 #       
 #       Copyright 2011 Wolf Halton <wolf@sourcefreedom.com>, LYRASIS
 #
@@ -23,9 +23,17 @@
 #       along with this program; if not, write to the Free Software
 #       Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #       MA 02110-1301, USA.
+shopt -s globstar
 
-find . -depth -name "* *" -execdir rename 's/ - /_-_/g' "{}" \;
-find . -depth -name "* *" -execdir rename 's/ /_/g' "{}" \;
-
-
-
+for f in $PWD/**
+do
+ if [ -f "$f" ]
+ then
+   # echo $f is a file
+   d="${f%/*}"; d=${d##*/}
+   mv -v "$f" "${f%/*}/${d}_${f##*/}" > /dev/null 2>&1
+ else
+   continue
+   # echo $f is a dir
+ fi
+done
