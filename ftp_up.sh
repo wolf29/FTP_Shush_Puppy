@@ -3,6 +3,10 @@
 #
 #       ftp_up.sh
 #       
+#       Description: This script makes an identical file structure 
+#       in the destination directory, and copies all the files of the 
+#       sort you wish into that directory structure
+#       
 #       Copyright 2011 Wolf Halton <wolf@sourcefreedom.com>, LYRASIS
 #       
 #       This program is free software; you can redistribute it and/or modify
@@ -22,16 +26,24 @@
 
 echo "First we have to change our location to the directory "
 echo " where the original file structure is"
-echo ''
+echo ' All of the directories on a drive can be duplicated if the '
+echo ' Present working directory is /media/source_drive '
 echo 'Currently we are here...'
 pwd
-echo "Enter full or irelative path to source directory"
+echo "Enter full or relative path to source directory"
+echo " a single dot is appropriate for a relative path of the "
+echo " present working directory."
+echo "Now the script will cd to the source directory if not already there."
 read sourced
 # cd to source directory
 cd $sourced
 pwd
 # Create the target directory
 echo "enter the full path to the target directory"
+echo "If you are working from /media/source_drive and mirroring the "
+echo "structure on /media/target_drive, you will see an error "
+echo "'Cannot make Directory target_drive, target already exists'  "
+echo "This is normal and no cause for alarm."
 read targetd 
 echo "create the target directory"
 mkdir $targetd

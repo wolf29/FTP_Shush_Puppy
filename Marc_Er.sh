@@ -1,7 +1,7 @@
-#!/bin/bash -x
+#!/bin/bash 
 # -x
 #
-#       Marc_Er.sh         Version 0.0.1
+#       Marc_Er.sh         Version 1.0.0
 #
 #       Copyright 2011 Wolf Halton <wolf@sourcefreedom.com>, LYRASIS
 #
@@ -33,25 +33,26 @@ echo "copy the proper marc.xml file into the parent directory of the directories
 echo "CD into that parent directory.  Run this script." 
 echo "If you are not set up properly, stop this script with <CTRL> <C>"
 ls *.xml
+witty=$(ls *.xml)
+echo $witty
 echo "If this is the file you expected to see enter a 'y' to continue,"
 echo "If this is not the file you are using or if more than one file appears, enter a 'n' for a prompt to enter the filename."
 echo "otherwise enter the proper file name at the next prompt"
 read m1
 
-if $m1="y"; then
-    marc=$((ls *.xml))
+if [[ ${m1} -eq "y" ]]; then
+    marc=$witty
 else
+    echo "Enter proper marc.xml filename"
     read marc
 fi
-for i in $((ls -d)); do
-    cd $i
-    echo $i
-    ParentDir=$(echo "${PWD}" | awk -F'/' '{print $NF}')
-    cp "../$marc" "$ParentDir"_marc.xml""
-    cd ..
+for i in * ; do
+    if [ -d $i ]; then 
+        echo "$i - is a directory"
+        cp "${marc}" "${i}/${i}_marc.xml"
+        echo "${i}/${i}_marc.xml is in place" >> ziplog.log
+    fi
     done 
-#echo "${PWD}" | awk -F'/' '{print $NF}'
-#echo "$ParentDir is the parent Directory name"
 
 
-
+echo "Your files are in place.  Now it is time to run File_Zipper.sh"

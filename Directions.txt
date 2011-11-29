@@ -1,0 +1,18 @@
+ftp_up.py
+ftp_up.sh
+How-cp-works.sh
+Renamer.sh
+Marc_Er.sh
+Filename_Checker.sh
+mvmv2.sh
+Underscore_Eviscerator_2.sh
+File_Zipper.sh
+Underscore_Eviscerator.sh
+ntest.sh
+Up_Loader.sh
+Old_Filename_checker.sh
+Parentify.sh
+
+Order of Precedence
+check for missing files "find . -empty | wc -l"
+if there are any empty files alert Upstream
