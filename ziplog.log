@@ -1,67 +1,52 @@
-../ftarget5/  directory structure is complete.
-../ftarget5/ *.pdf files have been moved.
-../ftarget6/  directory structure is complete.
-../ftarget6/ *.pdf files have been moved.
-../ftarget7/  directory structure is complete.
-../ftarget7/ *.pdf files have been moved.
+
+example1/example1_images.zip is complete
+example2/example2_images.zip is complete
+Example3/Example3_images.zip is complete
+example4/example4_images.zip is complete
+newNames/newNames_images.zip is complete
 /media/Disc_00/ftp_shush_puppy_ftp_staging/  directory structure is complete.
-/media/Disc_00/ftp_shush_puppy_ftp_staging/ *.zip files moved.
-/media/Disc_00/ftp_shush_puppy_ftp_staging/  ..complete.
+/media/Disc_00/ftp_shush_puppy_ftp_staging/    *.zip files moved.
+/media/Disc_00/ftp_shush_puppy_ftp_staging/    *.xml files moved to staging area.
+example1/example1_images.zip is complete
+example2/example2_images.zip is complete
+Example3/Example3_images.zip is complete
+example4/example4_images.zip is complete
+newNames/newNames_images.zip is complete
 /media/Disc_00/ftp_shush_puppy_ftp_staging/  directory structure is complete.
-/media/Disc_00/ftp_shush_puppy_ftp_staging/ *.zip files moved.
-/media/Disc_00/ftp_shush_puppy_ftp_staging/  ..complete.
+/media/Disc_00/ftp_shush_puppy_ftp_staging/    *.zip files moved.
+/media/Disc_00/ftp_shush_puppy_ftp_staging/    *.xml files moved to staging area.
+example1/example1_images.zip is complete
+example2/example2_images.zip is complete
+Example3/Example3_images.zip is complete
+example4/example4_images.zip is complete
+newNames/newNames_images.zip is complete
 /media/Disc_00/ftp_shush_puppy_ftp_staging/  directory structure is complete.
-/media/Disc_00/ftp_shush_puppy_ftp_staging/ *.zip files moved.
-/media/Disc_00/ftp_shush_puppy_ftp_staging/  ..complete.
+/media/Disc_00/ftp_shush_puppy_ftp_staging/    *.zip files moved.
+/media/Disc_00/ftp_shush_puppy_ftp_staging/    *.xml files moved to staging area.
+example1/example1_images.zip is complete
+example2/example2_images.zip is complete
+Example3/Example3_images.zip is complete
+example4/example4_images.zip is complete
+newNames/newNames_images.zip is complete
 /media/Disc_00/ftp_shush_puppy_ftp_staging/  directory structure is complete.
-/media/Disc_00/ftp_shush_puppy_ftp_staging/ *.zip files moved.
-/media/Disc_00/ftp_shush_puppy_ftp_staging/  ..complete.
+/media/Disc_00/ftp_shush_puppy_ftp_staging/    *.zip files moved.
+/media/Disc_00/ftp_shush_puppy_ftp_staging/    *.xml files moved to staging area.
+example1/example1_images.zip is complete
+example2/example2_images.zip is complete
+Example3/Example3_images.zip is complete
+example4/example4_images.zip is complete
+newNames/newNames_images.zip is complete
 /media/Disc_00/ftp_shush_puppy_ftp_staging/  directory structure is complete.
-/media/Disc_00/ftp_shush_puppy_ftp_staging/ *.zip files moved.
-/media/Disc_00/ftp_shush_puppy_ftp_staging/  ..complete.
+/media/Disc_00/ftp_shush_puppy_ftp_staging/    *.zip files moved.
+/media/Disc_00/ftp_shush_puppy_ftp_staging/    *.xml files moved to staging area.
+example1/example1_images.zip is complete
+example2/example2_images.zip is complete
+Example3/Example3_images.zip is complete
+example4/example4_images.zip is complete
+newNames/newNames_images.zip is complete
 /media/Disc_00/ftp_shush_puppy_ftp_staging/  directory structure is complete.
-/media/Disc_00/ftp_shush_puppy_ftp_staging/ *.zip files moved.
-/media/Disc_00/ftp_shush_puppy_ftp_staging/  ..complete.
-0_marc/0_marc_marc.xml is in place
-c.dat/c.dat_marc.xml is in place
-Directions.txt/Directions.txt_marc.xml is in place
-example1/example1_marc.xml is in place
-example2/example2_marc.xml is in place
-Example3/Example3_marc.xml is in place
-example4/example4_marc.xml is in place
-Filename_Checker.sh/Filename_Checker.sh_marc.xml is in place
-File_Zipper.sh/File_Zipper.sh_marc.xml is in place
-flist16.txt/flist16.txt_marc.xml is in place
-flist5.txt/flist5.txt_marc.xml is in place
-flist.txt/flist.txt_marc.xml is in place
-ftp_up.py/ftp_up.py_marc.xml is in place
-ftp_up.sh/ftp_up.sh_marc.xml is in place
-How-cp-works.sh/How-cp-works.sh_marc.xml is in place
-Marc_Er.sh/Marc_Er.sh_marc.xml is in place
-Mirror_Structure.sh/Mirror_Structure.sh_marc.xml is in place
-mudpup.dat/mudpup.dat_marc.xml is in place
-mvmv2.sh/mvmv2.sh_marc.xml is in place
-newNames/newNames_marc.xml is in place
-ntest.sh/ntest.sh_marc.xml is in place
-Old_Filename_checker.sh/Old_Filename_checker.sh_marc.xml is in place
-Parentify.sh/Parentify.sh_marc.xml is in place
-Pig.pdf/Pig.pdf_marc.xml is in place
-poke.pdf/poke.pdf_marc.xml is in place
-Renamer.sh/Renamer.sh_marc.xml is in place
-stage2.log/stage2.log_marc.xml is in place
-test_marc.xml/test_marc.xml_marc.xml is in place
-TODO/TODO_marc.xml is in place
-Underscore_Eviscerator_2.sh/Underscore_Eviscerator_2.sh_marc.xml is in place
-Underscore_Eviscerator.sh/Underscore_Eviscerator.sh_marc.xml is in place
-Up_Loader.sh/Up_Loader.sh_marc.xml is in place
-ziplog.log/ziplog.log_marc.xml is in place
-example1/example1_marc.xml is in place
-example2/example2_marc.xml is in place
-Example3/Example3_marc.xml is in place
-example4/example4_marc.xml is in place
-newNames/newNames_marc.xml is in place
-example1/example1_marc.xml is in place
-example2/example2_marc.xml is in place
-Example3/Example3_marc.xml is in place
-example4/example4_marc.xml is in place
-newNames/newNames_marc.xml is in place
+/media/Disc_00/ftp_shush_puppy_ftp_staging/    *.zip files moved.
+/media/Disc_00/ftp_shush_puppy_ftp_staging/    *.xml files moved to staging area.
+/media/Disc_00/ftp_shush_puppy_ftp_staging/  directory structure is complete.
+/media/Disc_00/ftp_shush_puppy_ftp_staging/    *.zip files moved.
+/media/Disc_00/ftp_shush_puppy_ftp_staging/    *.xml files moved to staging area.
