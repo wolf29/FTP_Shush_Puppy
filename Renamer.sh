@@ -3,9 +3,14 @@
 #
 #       Renamer.sh         Version 1.0.0
 #
-#       Copyright 2011 Wolf Halton <wolf@sourcefreedom.com>, LYRASIS
+#       Copyright 2011 Wolf Halton <wolf.halton@lyrasis.org>, LYRASIS
 #
-#       This program is free software; you can redistribute it and/or modify
+#        Description: This script takes a set of directories and renames 
+#       them based upon a list of new names.  It simply reads down the list 
+#       and replaces the directory name at the same place on the list with 
+#       the name on the list.
+#
+#        This program is free software; you can redistribute it and/or modify
 #       it under the terms of the GNU General Public License as published by
 #       the Free Software Foundation; either version 2 of the License, or
 #       (at your option) any later version.

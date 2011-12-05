@@ -1,13 +1,14 @@
 #!/bin/bash 
 # -*- coding: utf-8 -*-
 #
-#       Mirror_Structure.sh
+#       Mirror_Structure.sh 
+#       A better name than ftp_up.sh for how this script behaves
 #       
 #       Description: This script makes an identical file structure 
 #       in the destination directory, and copies all the files of the 
-#       sort you wish into that directory structure
+#       sort you wish into that directory structure 
 #       
-#       Copyright 2011 Wolf Halton <wolf@sourcefreedom.com>, LYRASIS
+#       Copyright 2011 Wolf Halton <wolf.halton@lyrasis.org>, LYRASIS
 #       
 #       This program is free software; you can redistribute it and/or modify
 #       it under the terms of the GNU General Public License as published by

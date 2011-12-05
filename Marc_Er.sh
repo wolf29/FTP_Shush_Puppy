@@ -3,7 +3,10 @@
 #
 #       Marc_Er.sh         Version 1.0.0
 #
-#       Copyright 2011 Wolf Halton <wolf@sourcefreedom.com>, LYRASIS
+#       Copyright 2011 Wolf Halton <wolf.halton@lyrasis.org>, LYRASIS
+#
+#       Description: This script adds the marc.xml file to each folder 
+#       and renames it as basename_marc.xml
 #
 #       This program is free software; you can redistribute it and/or modify
 #       it under the terms of the GNU General Public License as published by
@@ -19,9 +22,6 @@
 #       along with this program; if not, write to the Free Software
 #       Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #       MA 02110-1301, USA.
-
-
-# for copying the marc.xml file into each folder.
 
 # The following 2 lines makes the script treat the spaces in the
 #  variables as 'just another character'

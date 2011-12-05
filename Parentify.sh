@@ -7,7 +7,7 @@
 #       Parent directory name with the file name.  This is the production 
 #       version of mvmv2.sh which tests this function.
 #       
-#       Copyright 2011 Wolf Halton <wolf@sourcefreedom.com>, LYRASIS
+#       Copyright 2011 Wolf Halton <wolf.halton@lyrasis.org>, LYRASIS
 #
 #       This program is free software; you can redistribute it and/or modify
 #       it under the terms of the GNU General Public License as published by

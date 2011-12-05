@@ -7,7 +7,7 @@
 #       from all objects in the directory so that 
 #       the names can be manipulated safely.
 #       
-#       Copyright 2011 Wolf Halton <wolf@sourcefreedom.com>, LYRASIS
+#       Copyright 2011 Wolf Halton <wolf.halton@lyrasis.org>, LYRASIS
 #
 #       This program is free software; you can redistribute it and/or modify
 #       it under the terms of the GNU General Public License as published by
