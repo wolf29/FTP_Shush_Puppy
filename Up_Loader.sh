@@ -23,8 +23,8 @@
 #       MA 02110-1301, USA.
 
 
-#for item in (ls $targetd2) ; do
+
 scp -r * 74.217.44.233:/home/Lyrasis-FTP/ > ziplog.log 2>&1
-#echo $title " has been copied to FTP server."
-#done
+
+
 
