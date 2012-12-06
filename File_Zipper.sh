@@ -1,4 +1,5 @@
-#!/bin/bash 
+#!/bin/bash  
+# -x
 # -*- coding: utf-8 -*-
 #
 #       File_Zipper.sh Version 1.0.0

@@ -23,8 +23,12 @@
 #       MA 02110-1301, USA.
 
 
-
-scp -r * 74.217.44.233:/home/Lyrasis-FTP/ > ziplog.log 2>&1
+echo "User can specify which directory to put the file into by \
+entering on command line 'Up_Loader.sh [directory_name]'. \ 
+If no directory name is specified, the uploaded files \
+will be placed at hard-coded root."
+echo $1
+rsync -var -O * lyrasis@ftp.lyrasistechnology.org:/home/Lyrasis-FTP/$1/ >> ziplog.log 2>&1 
 
 
 

@@ -49,10 +49,12 @@ fi
 for i in * ; do
     if [ -d $i ]; then 
         echo "$i - is a directory"
-        cp "${marc}" "${i}/${i}_marc.xml"
-        echo "${i}/${i}_marc.xml is in place" >> ziplog.log
+        #cp "${marc}" "${i}/${i}_marc.xml"
+        cp "${marc}" "${i}/marc.xml"
+        #echo "${i}/${i}_marc.xml is in place" >> ziplog.log
+        echo "${i}/marc.xml is in place" >> ziplog.log
     fi
     done 
 
 
-echo "Your files are in place.  Now it is time to run File_Zipper.sh"
+echo "Your files are in place.  Now it is time to run Parentify.sh"
