@@ -1,5 +1,0 @@
-apple
-beta
-gamma
-delta
-epsilon

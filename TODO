@@ -1,5 +1,5 @@
-I have gotten the misnamed ftp_up.sh script complete to v1.0
-11/15/2011 - Filename_Checker.sh and Renamer.sh are also at v1.0.0
+
 To Do:
-Marc_Er.sh and Up_Loader.sh and File_Zipper.sh need a lot of work - v0.0.0.0 the lot of them
+
+Clean up instructions and order of the scripts.
 After that, the logs for these processes need to be combined (probably).
