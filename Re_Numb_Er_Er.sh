@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash 
 # -x
 #
 #       Re_Numb_Er_Er.sh         Version 1.0.0
@@ -31,7 +31,7 @@ IFS='
 '
 #-----------------
 ml=100
-while [[ "${ml}" -ne 0 ]]; do
+while [[ ${ml} -ne 0 ]]; do
 	echo "Are you in the proper directory? "
 	echo "CD into that parent directory.  Run this script." 
 	echo "If you are not set up properly, stop this script with <CTRL> <C>"
@@ -41,34 +41,55 @@ while [[ "${ml}" -ne 0 ]]; do
 	echo "To test what your new file structure will look like without "
 	echo " making changes, enter a '1' for 'test.'"
 	echo " to make the changes to the file system, enter '2' for 'yes.'"
-	read m1
+	#echo ${ml}
+	read choice1  
 
-	if [[ ${m1} -eq 0 ]]; then
-		echo "The program will exit now without making any changes."
-		break
-	else
-		if [[ ${ml} -eq 1 ]]; then
-			echo "This is a test of the changes you are planning to make"
-			break
-		else
-			if [[ ${ml} -eq 2 ]]; then
-				echo "There is still time to change your mind"
-				echo "If you are having second thoughts, press 'x' to quit"
-				echo "If you intend to continue, press 'y'"
-				read mm
-				if [[ ${mm} -eq 0 ]]; then
-					break
-				else
-					if [[ ${mm} -eq 2 ]]; then
-						crawl=001
-						for i in * ; do
-							crawl="${crawl}"+1
-							echo "cp '${i}' '${crawl}${i}'" 
-							done
-						echo "Your files are renamed.  "
-						fi
-					fi
-				fi
-			fi
-		fi;
+	case $choice1 in
+	[0]*)
+		echo="The program will exit now without making any changes."
+		ml=0  
+		;;
+	[1]*)
+		echo "This is a test of the changes you are planning to make"
+		for i in * ; do
+			echo "$i"
+			slice=${i:3}  
+			new="001"${slice}	
+			echo "${new}" 
+			done 
+		;;
+	[2]*)
+		echo "There is still time to change your mind"
+		mm=101
+		while [ $mm -ne 0 ]; do
+			echo "If you are having second thoughts, press '0' to quit"
+			echo "If you intend to continue, press '2'"
+			read choice2
+			
+			case $choice2 in
+			[0]*)
+				echo "The script will back up to the previous"
+				echo "section now without making any changes."
+				mm=0
+				;;		
+			[2]*)
+				for i in * ; do
+					echo "$i"  
+					arghh=${i}
+					slice=${arghh:3}
+					new="001"${slice}
+					mv ${i} ${new} 
+					echo "${i} is now ${new}" >> ziplog.txt
+				 done
+				echo "Your files are renamed.  "
+				mm=0  
+			;; 
+			esac
+		done
+		ml=0	
+	
+		;;
+	esac
+		
+		
 	done
