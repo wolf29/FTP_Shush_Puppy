@@ -53,7 +53,7 @@ Description: This script recursively replaces spaces with underscores in the nam
 Description: This script replaces spaces and special characters with underscores in all objects in the directory so that the names can be manipulated safely.
 
 --- Filename_Checker.sh Version 1.0.0
-# for testing whether the titles and file structure line up.  This displays the file-structure and the list of new names in the title_file but makes mo changes.  
+For testing whether the titles and file structure line up.  This displays the file-structure and the list of new names in the title_file but makes mo changes.  
 
 --- Renamer.sh         Version 1.0.0
 Description: This script takes a set of directories and renames them based upon a list of new names.  It simply reads down the list and replaces the directory name at the same place on the list with the name on the list.
