@@ -1,7 +1,7 @@
 FTP_Shush_Puppy
 ===============
 
-A series of scripts for working with uploading to digital repositories.  The way I use these requires that you know the 
+A series of scripts for working with uploading to digital repositories.  The way we use these requires that you know the 
 collection origin directory - on the hard drive that came from the digitizers
 collection mirror directory - on your local harddrive
 collection work directory - also on your local hard drive, and starts off as a perfect copy of the mirror directory
@@ -102,6 +102,7 @@ Make sure you are in the working directory
 ---  Up_Loader.sh
 
 Description: This script starts the upload to the proper directory in the FTP server
+
 Make sure your PWD is the ftp-staging directory created by the File_Zipper.sh script.
 
 -- Tools, Snippets and Obsolete Scripts
