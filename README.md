@@ -32,6 +32,8 @@ Up_Loader.sh
 
 TestCreator.sh
 
+ThumbNailer.sh
+
 ftp_up.py (obsolete)
 
 ftp_up.sh (obsolete version of Mirror_Structure)
@@ -109,6 +111,10 @@ Make sure your PWD is the ftp-staging directory created by the File_Zipper.sh sc
 ========================================
 --- TestCreator.sh Version 0.0.1
 Description: This script creates a test environment by grabbing the jp2 files in a given collection folder and moving them to a testing environment"
+
+--- ThumbNailer.sh
+Script to create thumbnails using Imagemagick.  Creates 7% resized jpg files from the jp2 files.  This works only inside a single folder, and produces a "pretty" filename, i.e., "file00213.jp2" => "file00213.jpg".
+This file also contains a fast and dirty one-liner that works recursively into subdirectories, however it produces ugly filenames, i.e. "file00213.jp2.jpg".
 
 --- ntest.sh
 Description: This script is a small list-comparison tool
