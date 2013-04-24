@@ -47,6 +47,11 @@ mvmv2.sh
 Old_Filename_checker.sh
 
 -- Order of Precedence
+Suggestion: use a byobu session to run these scripts.
+Byobu is a wrapper for screen, which lets you have multiple terminal sessions.  
+byobu
+Then when you break your ssh connection, the processes will still be running.  File-zipping and uploads can take a lot of time.
+--------------------------------
 
 When you get the drives in with the content to be uploaded, make sure it matches the invoice that came withthe disk
 check for missing files 
@@ -106,6 +111,10 @@ Make sure you are in the working directory
 Description: This script starts the upload to the proper directory in the FTP server
 
 Make sure your PWD is the ftp-staging directory created by the File_Zipper.sh script.
+Example: 
+Up_Loader.sh collection_name/  #puts the collections into the folder named "collection_name" You have to make sure that on the ftp server there is a directory of that name that is in the ftp folder on the ftp server, and it is owned by lyrasis in group ftp 
+chown -R lyrasis:ftp collection_name
+chmod -R 775 collection_name
 
 -- Tools, Snippets and Obsolete Scripts
 ========================================
