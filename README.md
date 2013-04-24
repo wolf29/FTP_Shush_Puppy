@@ -51,7 +51,6 @@ Suggestion: use a byobu session to run these scripts.
 Byobu is a wrapper for screen, which lets you have multiple terminal sessions.  
 byobu
 Then when you break your ssh connection, the processes will still be running.  File-zipping and uploads can take a lot of time.
---------------------------------
 
 When you get the drives in with the content to be uploaded, make sure it matches the invoice that came withthe disk
 check for missing files 
