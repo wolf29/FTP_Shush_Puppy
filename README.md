@@ -75,7 +75,9 @@ collection ftp-staging directory – the place from which the final zipped files
 ftp-server collection destination directory – You will create this folder on the ftp server.  A sane name for the folder here is “Original_collection_name,” since the Internet Archives uploaders want a folder-name that matches the collection owner's name.
 
 -- Order of Precedence
+
 --Scripts List (in order of use to process and upload images)
+
 -- Byobu
 
 Suggestion: use a byobu session to run these scripts.
